@@ -19,3 +19,7 @@ select * from riders;
 select * from passengers;
 select * from trips;
 
+#FOREIGN KEY TEST
+INSERT INTO trips (trip_id, rider_id, passenger_id, fare) VALUES 
+(6, 5, 10, 5000);
+
