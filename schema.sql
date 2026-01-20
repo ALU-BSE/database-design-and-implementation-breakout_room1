@@ -19,15 +19,12 @@ trip_id int PRIMARY KEY,
 rider_id int,
 passenger_id int,
 fare decimal(10,2),
-trip_date datetime DEFAULT current_timestamp,
-FOREIGN KEY (rider_id) REFERENCES riders(rider_id),
-FOREIGN KEY (passenger_id) REFERENCES passengers(passenger_id)
-
+trip_date datetime DEFAULT current_timestamp
 );
 
 ALTER TABLE trips
 ADD constraint fk_rider_id FOREIGN KEY (rider_id) REFERENCES riders(rider_id),
-ADD constraint FOREIGN KEY (passenger_id) REFERENCES passengers(passenger_id)
+ADD constraint fk_passenger_id FOREIGN KEY (passenger_id) REFERENCES passengers(passenger_id);
 
 
  
